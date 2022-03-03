@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>BlogPost template by Adobe Dreamweaver</title>
+  <link href="BlogPostAssets/styles/blogPostStyle.css" rel="stylesheet" type="text/css">
+  <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/7.4.0/adapter.min.js">
+  </script>
+  <script type="text/javascript" src="janus.js"></script>
+  <script type="text/javascript" src="streamingtest.js"></script>
+  <script>
+    $(function () {
+      $(".navbar-static-top").load("navbar.html", function () {
+        $(".navbar-static-top li.dropdown").addClass("active");
+        $(".navbar-static-top a[href='streamingtest.html']").parent().addClass("active");
+      });
+      $(".footer").load("footer.html");
+    });
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/cerulean/bootstrap.min.css"
+    type="text/css" />
+  <!-- <link rel="stylesheet" href="css/demo.css" type="text/css"/> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" />
+</head>
+
+<body>
+  <h1>Janus Streaming Viewer</h1>
+  <h3>by Gstreaming</h3>
+  <div id="content">
+    <div id="streams">
+      <div class="row">
+        <div id="box_streams" class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Streams <i id="update-streams" class="fa fa-refresh"
+                  title="Update list of streams" style="cursor: pointer;"></i></h3>
+            </div>
+            <div class="panel-body" id="list">
+              <div class="btn-group btn-group-sm">
+                <div class="row">
+                  <div class="col-md-6">
+                    <button class="btn btn-primary" autocomplete="off" id="watch">Watch or Listen</button>
+                  </div>
+                  <div class="col-md-6">
+                    <button autocomplete="off" id="streamset" class="btn btn-default dropdown-toggle"
+                      data-toggle="dropdown">
+                      Streams list<span class="caret"></span>
+                    </button>
+                    <ul id="streamslist" class="dropdown-menu" role="menu">
+                    </ul>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Stream
+                          <span class="label label-info hide" id="status"></span>
+                          <span class="label label-primary hide" id="curres"></span>
+                          <span class="label label-info hide" id="curbitrate"></span>
+                        </h3>
+                      </div>
+                      <div class="panel-body" id="stream"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+</body>
+
+</html>
